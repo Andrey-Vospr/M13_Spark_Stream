@@ -214,7 +214,7 @@ display(stream)
 ### 6) Aggregation (Gold Stage)
 
 ### "Gold stage" - aggregate data per city per day. 
-#### Aggregate: distinct hotels & rounded temps. Watermarking: automatically expires old state after 1 day.
+#### Aggregations: unique hotel count plus average/max/min temperature, rounded to two decimals for readability
 ```
 stream = (
     raw_stream
@@ -222,9 +222,6 @@ stream = (
       .withColumn("date",      to_date(col("wthr_date")))
       .withWatermark("wthr_date", "1 day")
 )
-```
-#### Aggregations: unique hotel count plus average/max/min temperature, rounded to two decimals for readability
-```
 aggregated = (
     stream
       .groupBy("city", "date")
