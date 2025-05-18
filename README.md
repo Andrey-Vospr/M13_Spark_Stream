@@ -147,7 +147,7 @@ print("Input path listing:")
 display(dbutils.fs.ls(input_path))
 ```
 <p align="center">
-  <img src="image/6Path.png" width="400" />
+  <img src="image/6Path.png" width="600" />
 </p>
 
 ### 4) Auto Loader (Bronze Stage)
