@@ -357,7 +357,7 @@ for city in top_cities:
 ``` 
   display(unpivot)
 ``` 
-#### All 10 cities presented in .html Notebook file
+#### All 10 cities presented in .html Notebook file, see below examples of the first 2 biggest cities visualization
 
 <p align="center">
   <img src="image/14Ex.png" width="700" />
